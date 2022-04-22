@@ -49,7 +49,6 @@ func main() {
 	for i := 1; i <= 5; i++ {
 		burstyRequests <- i
 	}
-
 	close(burstyRequests)
 
 	for req := range burstyRequests {
